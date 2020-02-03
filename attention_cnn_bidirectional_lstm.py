@@ -10,22 +10,18 @@ def main():
     # K.set_image_dim_ordering('tf')
 
     data_set_name = 'UCF-101'
-    input_dir_path = r'C:\fish_lice_dataset\UCF101'
+    input_dir_path = r'C:\UCF101'
     output_dir_path = os.path.join(os.path.dirname(__file__), 'models', data_set_name)
     report_dir_path = os.path.join(os.path.dirname(__file__), 'reports', data_set_name)
 
     # load_ucf(input_dir_path)
 
-    cnn_model_names = ['inceptionv3', 'vgg19']
+    cnn_model_names = ['inceptionv3', 'vgg19', 'vgg16', 'resnet50', 'xception']
     attentions = [1, 2, 0]
+    R = 10
 
     for cnn_model_name in cnn_model_names:
-        for attention in attentions:
-            if (cnn_model_name == 'vgg19' and attention == 1) or (cnn_model_name == 'vgg19' and attention == 2):
-                continue
-            R = 5
-            if cnn_model_name == 'inceptionv3':
-                R = 3
+        for attention in attentions:            
             for k in range(R):
                 result_file = os.path.join(r'C:\fish_lice_dataset\UCF101', 'cnn_result_' + cnn_model_name +
                                            '_' + str(attention) + '_fold_' + str(k) + '.csv')
