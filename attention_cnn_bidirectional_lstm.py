@@ -23,7 +23,7 @@ def main():
     for cnn_model_name in cnn_model_names:
         for attention in attentions:            
             for k in range(R):
-                result_file = os.path.join(r'C:\fish_lice_dataset\UCF101', 'cnn_result_' + cnn_model_name +
+                result_file = os.path.join(r'C:\UCF101', 'cnn_result_' + cnn_model_name +
                                            '_' + str(attention) + '_fold_' + str(k) + '.csv')
                 with open(result_file, 'w+') as rf:
                     classifier = BidirectionalLSTMVideoClassifier(cnn_model_name)
