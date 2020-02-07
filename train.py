@@ -19,7 +19,7 @@ def parse_args(args):
     parser.add_argument('cnn_model', help='Specify which CNN model is used (VGG16/VGG19/InceptionV3/Resnet50/Xception')
     parser.add_argument('--attention_mode', help='Specify how to add the attention block (after LSTM: cnn-lstm-attention, before LSTM: cnn-attention-lstm; no attention: cnn-lstm', default='cnn-lstm-attention')
     parser.add_argument('input_path', help='Specify the input data folder path')
-    parser.add_argument('--dataset_name', help='Specify the dataset name', default='UCF-101')
+    parser.add_argument('--dataset_name', help='Specify the dataset name (UCF-101/Sports-1M)', default='UCF-101')
     parser.add_argument('output_path', help='Specify the output path')
     parser.add_argument('--feature_extraction', help='Specify whether or not do feature extraction first', default=False)
     return check_args(parser.parse_args())
