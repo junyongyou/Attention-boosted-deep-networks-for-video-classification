@@ -1,5 +1,6 @@
 keras==2.2.4
 numpy==1.14.3
 opencv-python
+pytube==9.5.3
 scikit-learn
 tensorflow==1.13.1
