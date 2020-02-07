@@ -1,0 +1,5 @@
+keras==2.2.4
+numpy==1.14.3
+opencv-python
+scikit-learn
+tensorflow==1.13.1
