@@ -2,7 +2,7 @@
 This is a implementation of integrating a simple but efficient attention block in CNN + bidirectional LSTM for video classification.
 
 # Requirements
-Please install the packages listed in requirements.txt. Anaconda is recommended.
+Please install the packages listed in requirements.txt. Anaconda + PyCharm are recommended.
 
 # Train the model
 Run Python train.py cnn_model attention_mode(optional) input_path dataset_name output_path feature_extraction(optional)
@@ -34,4 +34,7 @@ def parse_args(args):
     parser.add_argument('config_path', help='Specify the config file path')
     return parser.parse_args(args)
 ```
+
+# Datasets
+Information about two datasets (UCF101 and Sports-1M) is presented in the utils module, including the 99 video classes together with download links from the Sports-1M.  
 
